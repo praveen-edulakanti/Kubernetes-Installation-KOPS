@@ -46,7 +46,7 @@
    ```
 1. Create kubernetes cluster definitions on S3 bucket 
    ```sh 
-    kops create cluster --cloud=aws --zones=ap-southeast-1b --name=dev.k8s.in --dns-zone=kube.in --dns private
+    kops create cluster --cloud=aws --zones=ap-south-1b --name=dev.k8s.in --dns-zone=kube.in --dns private
     ```
 1. Create kubernetes cluser
     ```sh 
@@ -83,5 +83,5 @@
 
 Note:  To launch the cluster with particular requirements use the below command 
 ```
-kops create cluster --cloud aws --kubernetes-version 1.15.0 --cloud-labels "Environment=QA" --master-count 3 --node-count 3 --node-size t2.medium --master-size t2.medium --master-zones ap-south-1a,ap-south-1b --zones ap-south-1a,ap-south-1b --network-cidr=10.1.0.0/16 --topology private --networking calico --ssh-public-key /root/kops-qa.pub --dns-zone=mydomain.in --dns private --name=phani-kube.in
+kops create cluster --cloud aws --kubernetes-version 1.15.0 --cloud-labels "Environment=QA" --master-count 3 --node-count 3 --node-size t2.medium --master-size t2.medium --master-zones ap-south-1a,ap-south-1b --zones ap-south-1a,ap-south-1b --network-cidr=10.1.0.0/16 --topology private --networking calico --ssh-public-key /root/kops-qa.pub --dns-zone=mydomain.in --dns private --name=qa-kube.in
  ```
